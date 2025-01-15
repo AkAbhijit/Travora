@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundarban - Travora</title>
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #1f2937;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../Assets/images/sundarban-hero.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .hero p {
+            font-size: 2rem;
+            animation: slideInFromBottom 1s ease-out;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 5rem auto;
+            padding: 1.5rem;
+            background: #f9fafb;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+        }
+
+        .highlight-section {
+            background: #d1fae5;
+            border-left: 5px solid #10b981;
+            padding: 1rem;
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .highlight-section h3 {
+            color: #065f46;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+            padding: 1rem 0;
+        }
+
+        .carousel img {
+            flex: none;
+            scroll-snap-align: center;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(90deg, #f59e0b, #ef4444);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(90deg, #ef4444, #f59e0b);
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sundarban</h1>
+    </header>
+
+    <div class="hero">
+        <p>Experience the Wild Like Never Before</p>
+    </div>
+
+    <div class="content">
+        <h2>About Sundarban</h2>
+        <p>
+            Sundarban, a UNESCO World Heritage Site, is a breathtaking mangrove forest located in India and Bangladesh.
+            It is known for its rich biodiversity, including the majestic Royal Bengal Tiger, spotted deer, crocodiles,
+            and a wide variety of birds.
+        </p>
+        <p>
+            The name Sundarban means "beautiful forest," and it lives up to its name with stunning landscapes and serene
+            waterways.
+        </p>
+
+        <div class="highlight-section">
+            <h3>Wildlife to Watch For:</h3>
+            <ul>
+                <li>Royal Bengal Tiger - The apex predator of this ecosystem.</li>
+                <li>Saltwater Crocodile - Found basking along riverbanks.</li>
+                <li>Spotted Deer - Often seen grazing near forest edges.</li>
+                <li>Exotic Birds - Including kingfishers, herons, and eagles.</li>
+                <li>Ganges River Dolphins - A rare sight in Sundarban's waters.</li>
+            </ul>
+        </div>
+
+        <div class="image-container">
+            <img src="./public/Assets/Img/sundarban.jpg" alt="Royal Bengal Tiger in Sundarban">
+            <p><em>The majestic Royal Bengal Tiger in its natural habitat.</em></p>
+        </div>
+
+        <div class="carousel">
+            <img src="./public/Assets/Img/sundarban.jpg" alt="Tiger">
+            <img src="./public/Assets/Img/sundarban.jpg" alt="Crocodile">
+            <img src="./public/Assets/Img/sundarban.jpg" alt="Mangrove Forest">
+            <img src="./public/Assets/Img/sundarban.jpg" alt="Spotted Deer">
+        </div>
+
+        <div class="map-container">
+            <h2>Location</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116254.28231517905!2d88.487311!3d21.9486199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02919d6e4c6c2f%3A0x6bc555bf4450d6e3!2sSundarbans!5e0!3m2!1sen!2sin!4v1672318365871!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="highlight-section">
+            <h3>Activities:</h3>
+            <ul>
+                <li>Boat Safaris - Traverse the mangrove waterways for an unforgettable experience.</li>
+                <li>Village Visits - Discover local culture and traditions.</li>
+                <li>Photography - Capture the diverse flora and fauna.</li>
+                <li>Bird Watching - Spot rare and migratory birds.</li>
+                <li>Night Tours - Experience the forest's unique nocturnal life.</li>
+            </ul>
+        </div>
+
+        <p>
+            Explore the waterways by boat, visit local villages, and enjoy the tranquil beauty of this natural wonder.
+        </p>
+        <a href="index.html" class="cta-button">Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Travora. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
