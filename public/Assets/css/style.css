@@ -1,0 +1,363 @@
+ /* Reset and base styles */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ /* Smooth scroll behavior */
+ html {
+   scroll-behavior: smooth;
+ }
+
+ /* Header styles */
+ header {
+   position: fixed;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.6);
+   padding: 1rem;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   z-index: 1000;
+ }
+
+ nav {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .logo {
+   font-family: "Alex Brush", cursive;
+   font-size: 2.3rem;
+   font-weight: bold;
+   color: #f59e0b;
+ }
+
+ .nav-links {
+   display: flex;
+   gap: 2rem;
+ }
+
+ .nav-links a {
+   text-decoration: none;
+   color: #f9fafb;
+   font-weight: 750;
+   letter-spacing: 1px;
+   transition: color 0.3s ease, transform 0.3s;
+ }
+
+ .nav-links a:hover {
+   color: #f59e0b;
+   transform: scale(1.1);
+ }
+
+ /* Hero section */
+ .hero {
+   height: 100vh;
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+     url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1920&q=80');
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   color: white;
+   padding: 0 1rem;
+   position: relative;
+   animation: fadeIn 2s ease-out;
+ }
+
+ .hero-content h1 {
+   font-size: 4rem;
+   margin-bottom: 1rem;
+   animation: slideInFromTop 1s ease-out;
+ }
+
+ .hero-content p {
+   font-size: 1.25rem;
+   margin-bottom: 2rem;
+   animation: slideInFromBottom 1s ease-out;
+ }
+
+ .cta-button {
+   display: inline-block;
+   padding: 1rem 2rem;
+   background-color: #f59e0b;
+   color: white;
+   text-decoration: none;
+   border-radius: 0.5rem;
+   transition: background-color 0.3s, transform 0.3s;
+   position: relative;
+   /* Needed to position the arrow */
+ }
+
+ .cta-button:hover {
+   background-color: #f97316;
+   transform: translateY(-5px);
+ }
+
+ .cta-button::after {
+   content: "→";
+   /* Adding a right arrow */
+   font-size: 1.5rem;
+   margin-left: 0.5rem;
+   transition: transform 0.3s ease;
+ }
+
+ .cta-button:hover::after {
+   transform: translateX(5px);
+   /* Arrow moves when hovered */
+ }
+
+ /* Destinations section */
+ .destinations {
+   padding: 5rem 1rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   animation: fadeIn 2s ease-out;
+ }
+
+ .section-title {
+   text-align: center;
+   font-size: 3rem;
+   margin-bottom: 3rem;
+   color: #1f2937;
+   letter-spacing: 2px;
+ }
+
+ .destinations-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 2rem;
+   animation: fadeInUp 2s ease-out;
+ }
+
+ .destination-card {
+   border-radius: 0.75rem;
+   overflow: hidden;
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .destination-card img {
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+   transition: transform 0.3s ease;
+   border-radius: 0.75rem 0.75rem 0 0;
+ }
+
+ /* Hover effect for the card */
+ .destination-card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+ }
+
+ .destination-card:hover img {
+   transform: scale(1.1);
+ }
+
+ .destination-info {
+   padding: 1.5rem;
+   background-color: rgba(255, 255, 255, 0.9);
+   border-radius: 0 0 0.75rem 0.75rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100%;
+   position: relative;
+ }
+
+ /* Heading */
+ .destination-info h3 {
+   margin-bottom: 0.5rem;
+   color: #1f2937;
+   font-size: 1.8rem;
+   font-weight: 700;
+ }
+
+ /* Description */
+ .destination-info p {
+   color: #6b7280;
+   margin-bottom: 1rem;
+ }
+
+ .destination-price {
+   font-size: 2rem;
+   font-weight: bold;
+   color: #f59e0b;
+   margin-top: auto;
+   padding: 0.5rem 1rem;
+   background-color: #ffffff;
+   border-radius: 0.5rem;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   position: relative;
+   width: fit-content;
+   margin-bottom: 1rem;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   margin-right: auto;
+   margin-left: auto;
+ }
+
+ /* Hover Effect for Pricing */
+ .destination-card:hover .destination-price {
+   transform: scale(1.1);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+ }
+
+ /* Discount Badge */
+ .destination-price::before {
+   content: 'Save 15%';
+   font-size: 1rem;
+   color: #ffffff;
+   background-color: #d1d5db;
+   padding: 0.25rem 0.5rem;
+   border-radius: 1rem;
+   position: absolute;
+   top: -1rem;
+   left: 50%;
+   transform: translateX(-50%);
+   display: inline-block;
+ }
+
+ /* Testimonials section */
+ .testimonials {
+   background-color: #f3f4f6;
+   padding: 5rem 1rem;
+   animation: fadeInUp 2s ease-out;
+ }
+
+ .testimonials-container {
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+
+ .testimonials-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 2rem;
+ }
+
+ .testimonial-card {
+   background-color: white;
+   padding: 2rem;
+   border-radius: 0.75rem;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .testimonial-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ }
+
+ .testimonial-text {
+   font-style: italic;
+   margin-bottom: 1rem;
+   color: #4b5563;
+ }
+
+ .testimonial-author {
+   font-weight: bold;
+   color: #1f2937;
+ }
+
+ /* Footer */
+ footer {
+   background-color: #1f2937;
+   color: white;
+   padding: 2rem 1rem;
+   text-align: center;
+   margin-top: 5rem;
+ }
+
+ /* Animations */
+ @keyframes fadeIn {
+   0% {
+     opacity: 0;
+   }
+
+   100% {
+     opacity: 1;
+   }
+ }
+
+ @keyframes fadeInUp {
+   0% {
+     opacity: 0;
+     transform: translateY(20px);
+   }
+
+   100% {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+
+ @keyframes slideInFromTop {
+   0% {
+     opacity: 0;
+     transform: translateY(-30px);
+   }
+
+   100% {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+
+ @keyframes slideInFromBottom {
+   0% {
+     opacity: 0;
+     transform: translateY(30px);
+   }
+
+   100% {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+
+ /* Mobile menu */
+ .mobile-menu-button {
+   display: none;
+   background: none;
+   border: none;
+   font-size: 1.5rem;
+   cursor: pointer;
+   color: #f9fafb;
+ }
+
+ @media (max-width: 768px) {
+   .mobile-menu-button {
+     display: block;
+   }
+
+   .nav-links {
+     display: none;
+     position: absolute;
+     top: 100%;
+     left: 0;
+     right: 0;
+     background: #1f2937;
+     padding: 1rem;
+     flex-direction: column;
+     text-align: center;
+   }
+
+   .nav-links.active {
+     display: flex;
+   }
+
+   .hero-content h1 {
+     font-size: 2.5rem;
+   }
+ }
