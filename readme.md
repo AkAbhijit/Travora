@@ -22,11 +22,10 @@ To get started with Travora, follow these steps:
 
 The code is organized into the following directories:
 
-* `public/`: This directory contains the static assets for the website, such as images, CSS, and JavaScript files.
 * `src/`: This directory contains the source code for the website, including HTML, CSS, and JavaScript files.
-* `components/`: This directory contains reusable React components.
-* `containers/`: This directory contains React containers, which are components that wrap other components.
-* `utils/`: This directory contains utility functions and constants used throughout the website.
+* `public/`: This directory contains the static assets for the website, such as images, CSS, and JavaScript files.
+* `Assets/`: This directory contains reusable assets, such as images, fonts, and other resources commonly used across the project.
+* `Pages/`: This directory contains React components that serve as page-level containers, responsible for rendering and managing other components.
 
 The code is written in a modular fashion, with each component or container having its own file. The code is also well-commented, with clear and concise comments explaining what each function or component does.
 
